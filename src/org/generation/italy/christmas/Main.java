@@ -25,10 +25,19 @@ public class Main {
 			System.out.println("Vuoi aggiungere un altro elemento?");
 			String choice = sc.next();
 			
+			if (!choice.equals("sì") && !choice.equals("no")) {
+				
+				System.err.println("Per favore, inserire un valore valido");
+				System.out.println("Vuoi aggiungere un altro elemento?");
+				choice = sc.next();
+			}
+			
 			if (choice.equals("sì")) {
 				
 				yOn = true;
-			} else {
+			}
+			
+			if (choice.equals("no")) {
 				
 				yOn = false;
 				break;
